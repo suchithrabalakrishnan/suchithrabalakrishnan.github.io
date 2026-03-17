@@ -450,15 +450,15 @@ p:last-child { margin-bottom: 0; }
 
 .company-logo {
   display: block;
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   margin-top: 0.4rem;
 }
 
 .company-logo.edu-logo {
-  width: 100px;
-  height: 100px;
+  width: 65px;
+  height: 65px;
 }
 
 .experience-dates {
