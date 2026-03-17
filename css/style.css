@@ -456,6 +456,11 @@ p:last-child { margin-bottom: 0; }
   margin-top: 0.4rem;
 }
 
+.company-logo.edu-logo {
+  width: 100px;
+  height: 100px;
+}
+
 .experience-dates {
   font-size: 0.82rem;
   color: var(--color-text-muted);
