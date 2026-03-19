@@ -420,6 +420,29 @@
     function toggleNav() {
       document.getElementById('main-nav').classList.toggle('nav-open');
     }
+
+    // Update active nav link based on scroll position
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = [
+      { id: null, link: navLinks[0] },           // Home = top
+      { id: 'experience', link: navLinks[1] },   // About
+      { id: 'contact', link: navLinks[2] },      // Contact
+    ];
+
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 100;
+      let current = sections[0];
+      for (const s of sections) {
+        if (!s.id) continue;
+        const el = document.getElementById(s.id);
+        if (el && el.offsetTop <= scrollY) current = s;
+      }
+      navLinks.forEach(a => a.classList.remove('active'));
+      current.link.classList.add('active');
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
   </script>
 </body>
 </html>
